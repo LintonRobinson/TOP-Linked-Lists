@@ -33,7 +33,7 @@ class LinkedList {
 
     
 
-    getsize() {
+    getSize() {
         if (this.head === null) throw Error('Link list is empty.');
         let total = 0;
         let currentNode = this.head
@@ -60,6 +60,17 @@ class LinkedList {
 
         return currentNode;
     };
+
+    getNodeAtIndex(index) {
+        if (this.head === null) throw Error('Link list is empty.');
+        let currentIndex = 0;
+        let currentNode = this.head;
+        while (currentIndex != index) {
+            currentNode = currentNode.nextNode;
+            currentIndex++;    
+        }; 
+        return currentNode; 
+    }
 
 
 };

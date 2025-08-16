@@ -19,4 +19,4 @@ console.log('This is the number of linked list', myFirstList.getsize());
 
 console.log('This is the head of the linked list', myFirstList.getHead());
 
-console.log('This is the head of the linked list', myFirstList.getHead());
+console.log('This is the tail of the linked list', myFirstList.getTail());

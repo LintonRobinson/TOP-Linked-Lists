@@ -82,6 +82,16 @@ class LinkedList {
         } 
         previousNode.nextNode = null;
     };
+
+    listContainsValue(value) {
+        if (this.head === null) throw Error('Link list is empty.'); 
+        let currentNode = this.head;
+        while (currentNode != null) {
+            if (currentNode.value === value) return true;
+            currentNode = currentNode.nextNode;
+        } 
+        return false;
+    };
 };
 
 export default LinkedList

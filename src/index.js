@@ -6,7 +6,7 @@ import LinkedList from "./LinkedList.js"
 
 const myFirstList = new LinkedList();
 
-myFirstList.appendNode("My first link list node. Ya mama");
+myFirstList.appendNode("Ya Mama");
 
 myFirstList.appendNode("Second");
 
@@ -23,3 +23,5 @@ console.log('This is the head of the linked list', myFirstList.getHead());
 console.log('This is the tail of the linked list', myFirstList.getTail());
 
 console.log('This is the node at the index in the list', myFirstList.getNodeAtIndex(1));
+
+console.log('Does the list contain Ya Mama?', myFirstList.listContainsValue("Ya Mama"));

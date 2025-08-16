@@ -25,3 +25,5 @@ console.log('This is the tail of the linked list', myFirstList.getTail());
 console.log('This is the node at the index in the list', myFirstList.getNodeAtIndex(1));
 
 console.log('Does the list contain Ya Mama?', myFirstList.listContainsValue("Ya Mama"));
+
+console.log('What index is Ya Mama?', myFirstList.findListValueIndex("Ya Mama"));

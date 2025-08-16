@@ -92,6 +92,34 @@ class LinkedList {
         } 
         return false;
     };
+
+    findListValueIndex(value) {
+        if (this.head === null) throw Error('Link list is empty.'); 
+        let currentIndex = 0;
+        let currentNode = this.head;
+        while (currentNode != null) {
+            if (currentNode.value === value) return currentIndex;
+            currentNode = currentNode.nextNode;
+            currentIndex++; 
+        } 
+        return null;
+    }
+
+    findListValueIndex(value) {
+        if (this.head === null) throw Error('Link list is empty.'); 
+        let currentIndex = 0;
+        let currentNode = this.head;
+        while (currentNode != null) {
+            if (currentNode.value === value) return currentIndex;
+            currentNode = currentNode.nextNode;
+            currentIndex++; 
+        } 
+        return null;
+    }
+
+    linkedListToString() {
+        
+    }
 };
 
 export default LinkedList

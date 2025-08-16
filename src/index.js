@@ -13,7 +13,6 @@ myFirstList.appendNode("Second");
 
 myFirstList.prependNode("No wait, this on is the first");
 
-
 console.log(myFirstList);
 
 console.log('This is the number of linked list', myFirstList.getsize());

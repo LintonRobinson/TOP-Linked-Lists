@@ -70,9 +70,18 @@ class LinkedList {
             currentIndex++;    
         }; 
         return currentNode; 
-    }
+    };
 
-
+    pop() {
+        if (this.head === null) throw Error('Link list is empty.'); 
+        let currentNode = this.head;
+        let previousNode = null;
+        while (currentNode.nextNode != null) {
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+        } 
+        previousNode.nextNode = null;
+    };
 };
 
 export default LinkedList

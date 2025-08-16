@@ -12,6 +12,8 @@ myFirstList.appendNode("Second");
 
 myFirstList.prependNode("No wait, this on is the first");
 
+console.log('The "Second" should not be here', myFirstList.pop());
+
 console.log(myFirstList);
 
 console.log('This is the number of linked list', myFirstList.getSize());

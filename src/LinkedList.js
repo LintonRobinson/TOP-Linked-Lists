@@ -117,6 +117,42 @@ class LinkedList {
         
         return linkedListString
     }
+
+    insertAt(value, index) {
+        if (this.head === null) {
+            this.head = new Node();
+            this.head.value = value;
+            return 
+        }; 
+
+        let currentIndex = 0;
+        let currentNode = this.head;
+        let previousNode = null;
+        
+        while (currentIndex != index) {  
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+            currentIndex++;
+            console.log('The current index is not')
+        }; 
+
+        if (currentIndex === 0) {
+            let prependedNode = new Node();
+            prependedNode.value = value;
+            prependedNode.nextNode = this.head;
+            this.head = prependedNode;
+        } else {
+            previousNode.nextNode = new Node();
+            previousNode.nextNode.value = value;
+            previousNode.nextNode.nextNode = currentNode;
+        }
+        
+
+        
+        
+    }
+    
+    /* insertAt(value, index) that inserts a new node with the provided value at the given index. */ 
 };
 
 export default LinkedList

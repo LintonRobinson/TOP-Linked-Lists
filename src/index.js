@@ -8,11 +8,11 @@ import LinkedList from "./LinkedList.js"
 
 const myFirstList = new LinkedList();
 
-myFirstList.appendNode("Ya Mama");
+myFirstList.appendNode("First");
 
 myFirstList.appendNode("Second");
 
-myFirstList.prependNode("No wait, this on is the first");
+myFirstList.insertAt("This Should actually be first",0)
 
 //console.log('The "Second" should not be here', myFirstList.pop());
 

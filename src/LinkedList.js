@@ -2,13 +2,13 @@ import Node from "./Node.js"
 class LinkedList {
     constructor() {
         this.head = null;
-    }
+    };
     
     prependNode(data) {
         if (this.head === null) {
             this.head = new Node();
             this.head.value = data;
-            return 
+            return;
         }; 
 
         let prependedNode = new Node();
@@ -21,7 +21,7 @@ class LinkedList {
         if (this.head === null) {
             this.head = new Node();
             this.head.value = data;
-            return 
+            return;
         }; 
 
         let currentNode = this.head;
@@ -31,7 +31,6 @@ class LinkedList {
 
     };
 
-    
 
     getSize() {
         if (this.head === null) throw Error('Link list is empty.');
@@ -46,7 +45,6 @@ class LinkedList {
         return total;
     };
 
-
     getHead() {
         if (this.head === null) throw Error('Link list is empty.');
         return this.head;
@@ -54,10 +52,8 @@ class LinkedList {
 
     getTail() {
         if (this.head === null) throw Error('Link list is empty.');
-        
         let currentNode = this.head;
         while (currentNode.nextNode != null) currentNode = currentNode.nextNode;
-
         return currentNode;
     };
 
@@ -133,10 +129,9 @@ class LinkedList {
             previousNode = currentNode;
             currentNode = currentNode.nextNode;
             currentIndex++;
-            console.log('The current index is not')
         }; 
 
-        if (currentIndex === 0) {
+        if (currentIndex === 0) { // If it's the first node to be added, reassign head
             let prependedNode = new Node();
             prependedNode.value = value;
             prependedNode.nextNode = this.head;
@@ -145,14 +140,44 @@ class LinkedList {
             previousNode.nextNode = new Node();
             previousNode.nextNode.value = value;
             previousNode.nextNode.nextNode = currentNode;
-        }
-        
-
-        
-        
+        };     
     }
-    
-    /* insertAt(value, index) that inserts a new node with the provided value at the given index. */ 
+
+    removeAt(index) {
+        if (this.head === null) throw Error('Link list is empty.'); 
+
+        let currentIndex = 0;
+        let currentNode = this.head;
+        let previousNode = null;
+        
+        while (currentIndex != index) {  
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+            console.log('Ran',currentIndex);
+            currentIndex++;
+            
+
+        }; 
+        
+        if (currentIndex === 0 && currentNode.nextNode === null) { // only 1 node in list
+            console.log('Ya Mamas Culpret',currentIndex)
+            this.head = null;
+            
+        
+        } else if (currentIndex === 0) { // head of list, and more than one node
+            this.head = this.head.nextNode
+            
+        } 
+        else if (currentNode.nextNode === null) { // tail
+            previousNode.nextNode = null;
+            
+        } else {
+            previousNode.nextNode = currentNode.nextNode;
+            
+        };        
+    };
 };
+
+
 
 export default LinkedList
